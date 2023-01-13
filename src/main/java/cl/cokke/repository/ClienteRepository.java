@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import cl.cokke.models.Cliente;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<Long, Cliente>{
+public interface ClienteRepository extends JpaRepository<Cliente, Long>{
 
 }
