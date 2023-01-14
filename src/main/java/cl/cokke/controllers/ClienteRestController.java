@@ -43,6 +43,7 @@ public class ClienteRestController {
 		return clienteService.save(cliente);
 	}
 	
+	@CrossOrigin(origins = {"http://localhost:4200"})
 	@PutMapping("/clientes/{id}")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Cliente update(@PathVariable Long id, @RequestBody Cliente cliente) {
