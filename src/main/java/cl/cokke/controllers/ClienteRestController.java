@@ -45,7 +45,7 @@ public class ClienteRestController {
 		}catch(DataAccessException e) {
 			response.put("mensaje", "Error en la base de datos");
 			response.put("error", e.getMessage().concat(": ").concat(e.getMostSpecificCause().getMessage()));
-			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.NOT_FOUND);
+			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		
 		if(cliente == null) {
